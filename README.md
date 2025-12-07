@@ -1,18 +1,41 @@
-## Getting Started
+## Continuous CLI Calculator
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Basit, sürekli çalışan bir komut satırı hesap makinesi. Toplama, çıkarma, çarpma ve bölme yapar; hatalı girişleri yakalar ve Türkçe mesajlarla kullanıcıyı yönlendirir.
 
-## Folder Structure
+## Gereksinimler
+- Java 17+
+- Maven 3.9+
 
-The workspace contains two folders by default, where:
+## Çalıştırma
+```bash
+mvn clean package
+mvn -q exec:java
+# veya
+java -cp target/classes app.App
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Örnek oturum:
+```
+=== Sürekli Hesap Makinesi ===
+Başlangıç sayısını girin:
+10
+İşlem girin (+, -, *, /). Bitirmek için '=' veya 'q' yazın:
++ 
+Bir sonraki sayıyı girin:
+5
+Ara sonuç: 15.0
+...
+Nihai sonuç: 30.0
+```
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Çıkmak için `=` veya `q/quit/exit` yazabilirsiniz. Geçersiz girişlerde uygulama hata mesajı verip ilerlemeye devam eder.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Testler
+```bash
+mvn test
+```
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Yapı
+- Maven standart dizinleri (`src/main/java`, `src/test/java`)
+- Uygulama paketi: `app`
+- Başlangıç sınıfı: `app.App`

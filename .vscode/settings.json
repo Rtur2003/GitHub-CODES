@@ -1,6 +1,6 @@
 {
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin",
+    "java.project.sourcePaths": ["src/main/java"],
+    "java.project.outputPath": "target/classes",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ]
